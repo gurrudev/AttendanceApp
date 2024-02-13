@@ -25,9 +25,9 @@ const Reports = () => {
     }, []);
 
     useEffect(() => {
-        if (user !== null) {
+        // if (user !== null) {
             reportData(user);
-        }
+        // }
     }, [user]);
 
     return (
@@ -42,7 +42,7 @@ const Reports = () => {
                     </div>
                 ))}
                 <div className="btn">
-                    <button className="btn-report" onClick={() => navigate('/home')}>
+                    <button className="btn-report color-green" onClick={() => navigate('/home')}>
                         Back to home
                     </button>
                 </div>

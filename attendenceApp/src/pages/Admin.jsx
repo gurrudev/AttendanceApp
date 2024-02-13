@@ -36,7 +36,7 @@ const Admin = () => {
                 ))}
 
                 <div className='btn'>
-                    <button className='btn-report' onClick={() => { navigate('/') }}>Logout</button>
+                    <button className='btn-report color-red' onClick={() => { navigate('/') }}>Logout</button>
                 </div>
             </div>
         </div>

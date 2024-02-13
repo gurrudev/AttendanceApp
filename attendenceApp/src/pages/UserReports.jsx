@@ -32,7 +32,7 @@ const UserReports = () => {
                 ))}
 
                 <div className='btn'>
-                    <button className='btn-report' onClick={() => { navigate('/admin') }}>Back to dashboard</button>
+                    <button className='btn-report color-green' onClick={() => { navigate('/admin') }}>Back to dashboard</button>
                 </div>
             </div>
 
