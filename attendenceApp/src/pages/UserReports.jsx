@@ -6,26 +6,33 @@ const UserReports = () => {
     const { id } = useParams();
     const [userData, setUserData] = useState()
     const [attendance, setAttendance] = useState([])
+    const [loading, setLoading] = useState(true)
+
     const navigate = useNavigate()
 
     const reportData = async (_id) => {
         const data = await GetAttendenceDataByUser(_id);
         setUserData(data.data.attendanceData.username);
         setAttendance(data.data.attendanceData.attendances);
+        setLoading(false)
     };
 
     useEffect(() => {
         reportData(id)
     }, [])
 
+    if (loading) {
+        return <p>Loading...</p>;
+    }
+
     return (
         <div className='container'>
             <div>
 
-                <h2>User Reports of : {userData}</h2>
+                <h2>Reports of : {userData}</h2>
                 {attendance.map((item) => (
-                    <div className="reports" key={item._id} >
-                        <span className=''>Date: {item.date}</span>
+                    <div className="reports mt-3" key={item._id} >
+                       <strong> <span className=''>{item.date}</span></strong>
                         <span className=''>Sign In: {item.loginTime}</span>
                         <span className=''>Sign Out: {item.logoutTime}</span>
                     </div>

@@ -1,19 +1,25 @@
+body {
+  background-color: rgb(220, 242, 242);
+}
 
-
-.container{
+.container {
   margin-top: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.home-1{
+.home-1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.date-and-time{
+.mt-3 {
+  margin-top: 10px;
+}
+
+.date-and-time {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -21,15 +27,11 @@
   align-items: center;
 }
 
-.date{
-  
-}
+.date {}
 
-.time{
-  
-}
+.time {}
 
-.btn{
+.btn {
   display: flex;
   font-size: 18px;
   padding: 50px 12px;
@@ -37,36 +39,46 @@
   align-items: center;
 }
 
-.btn-action, .btn-report{
+.btn-action,
+.btn-report {
   padding: 10px 20px;
   cursor: pointer;
 }
 
-.form{
+.form {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  background-color: white;
+  border: 1px solid rgba(236, 232, 232, 0.989);
+  padding: 50px;
 }
 
-.inputs{
+.form-heading {
+  margin-top: -20px;
+  margin-bottom: 0px;
+}
+
+.inputs {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
 
-.form-input{
+.form-input {
   border-color: rgb(111, 107, 107);
   border-radius: 3px;
   padding: 7px 15px;
 }
 
-.form-btns{
+.form-btns {
   margin-top: 20px;
   display: flex;
   justify-content: space-between;
 }
 
-.btn-login, .btn-reg{
+.btn-login,
+.btn-reg {
   cursor: pointer;
   padding: 10px 15px;
   border: none;
@@ -74,47 +86,69 @@
   font-size: 15px;
 }
 
-.btn-login{
+.btn-login {
   background-color: rgb(83, 80, 154);
   color: aliceblue;
 }
 
-.btn-reg{
+.btn-reg {
   background-color: rgb(48, 100, 48);
   color: aliceblue;
 }
 
-.reports{
+.reports {
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding: 20px;
   width: 200px;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  background-color: white;
+  border: 1px solid rgba(236, 232, 232, 0.989);
 }
 
-.pointer{
+.pointer {
   cursor: pointer;
 }
 
-.color-red{
+.color-red {
   background-color: brown;
   border: none;
   border-radius: 3px;
-  color:aliceblue;
+  color: aliceblue;
 }
 
-.color-green{
+.color-green {
   background-color: rgb(39, 105, 39);
   border: none;
   border-radius: 3px;
-  color:aliceblue;
+  color: aliceblue;
 }
 
-.color-blue{
+.color-blue {
   background-color: rgb(83, 80, 154);
   border: none;
   border-radius: 3px;
-  color:aliceblue;
+  color: aliceblue;
+}
+
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #FFF;
+  border-bottom-color: rgb(83, 80, 154);
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }

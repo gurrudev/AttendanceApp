@@ -76,6 +76,7 @@ const Register = () => {
             <Toaster position="top-center" reverseOrder={false} />
             <div className="container">
                 <div className="form">
+                    <h2 className='form-heading'>Registration</h2>
                     <div className="inputs">
                         <label htmlFor="username">Username</label>
                         <input
@@ -110,7 +111,7 @@ const Register = () => {
                     </div>
 
                     <div className="inputs">
-                        <label htmlFor="phoneno">Phone NO.</label>
+                        <label htmlFor="phoneno">Phone number</label>
                         <input
                             type="text"
                             className="form-input"

@@ -30,7 +30,7 @@ const Login = () => {
     try {
       if (validateForm()) {
 
-        if(userLoginData.username === 'admin' && userLoginData.password === 'admin') {
+        if (userLoginData.username === 'admin' && userLoginData.password === 'admin') {
           navigate('/admin');
         }
         const login = await UserLogin(userLoginData);
@@ -48,23 +48,24 @@ const Login = () => {
     }
   };
 
-  const userData = async(token) =>{
+  const userData = async (token) => {
     const data = await GetUserData(token)
-    if(data){
+    if (data) {
       navigate('/home')
     }
   }
 
-  useEffect(()=>{
+  useEffect(() => {
     const token = localStorage.getItem('token')
     // console.log(token)
     userData(token);
-}, [])
+  }, [])
 
   return (
     <div className="container">
       <Toaster position="top-center" reverseOrder={false} />
       <div className="form">
+        <h2 className='form-heading'>Login</h2>
         <div className="inputs">
           <label htmlFor="username">Username</label>
           <input
